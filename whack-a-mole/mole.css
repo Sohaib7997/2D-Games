@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 32px;
+    background: url(../assests/bg.png) ;
+    background-size: cover;
+    color:wheat
+}
+
+#board{
+    width: 540px;
+    height: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: url(../assests/soil.jpg);
+    background-size: cover;
+    border: 3px solid white;
+    border-radius:25px;
+      
+       
+  
+}
+
+#board div{
+    width: 180px;
+    height: 180px;
+     position: relative;
+    overflow: visible;
+  
+   
+}
+
+#board div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left:10px;
+    width: 90%;
+    height: 40%;  
+    background-image: url("../assests/pipe.png");
+    background-size: cover;
+    z-index: 5; 
+}
+
+
+#board div img{
+width: 100px;
+height: 110px;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+ -ms-user-select: none;
+}
