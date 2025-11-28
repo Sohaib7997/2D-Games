@@ -13,7 +13,7 @@ function setGame(){
     }
 
     setInterval(setMole,1000)
-    setInterval(setFlower,3000)
+    setInterval(setFlower,2000)
 }
 
 
