@@ -2,10 +2,18 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 32px;
+    
     background: url("../assests/bg.png") ;
     background-size: cover;
-    color:wheat
+    color:wheat;
+    @media (width <= 460px) {
+font-size: 10px;
+text-align: center
+
 }
+}
+
+
 
 #board{
     width: 540px;

@@ -1,5 +1,6 @@
 
-let currMoleTile,currFlowerTile,score=0,gameOver=false
+let currMoleTile,currFlowerTile,score=0,gameOver=false,hammerHit= new Audio("../assests/hit.wav"),lose= new Audio ("../assests/lose.wav"), moleHit = false; 
+
 window.onload =function(){
     setGame()
 }
@@ -40,6 +41,8 @@ if (gameOver) return
     }
     currMoleTile=document.getElementById(num)
     currMoleTile.appendChild(mole)
+        moleHit = false;
+
 }
 
 function setFlower(){
@@ -65,12 +68,15 @@ if (gameOver) return
 function selectTile(){
 
     if (gameOver) return
-    if (this===currMoleTile){
+    if (this===currMoleTile  && !moleHit){
         score+=10
+        hammerHit.play()
         document.getElementById("score").innerText=score.toString()
+        moleHit = true; 
     }
     else if(this === currFlowerTile){
         gameOver=true
+        lose.play()
     document.getElementById("score").innerText="Game Over: "+score.toString();
     }
 }
